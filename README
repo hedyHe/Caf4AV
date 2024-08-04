@@ -1,1 +1,6 @@
 how do LLMs assist to attribute value-level canonicalization in Open KB?
+
+1. text_embedding : get embeddings from GPT for every value
+2. cluster: calculate similarities between value pairs + clustering
+3. post_pre4cluster: correct clustering by LLMs
+4. final_cluster_by_api: find clusters directly by LLMs
