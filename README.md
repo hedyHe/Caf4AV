@@ -14,6 +14,7 @@ The repository is only for the third step 'Synsets Mining', which is a fully-aut
 ### Dependencies
 
 Compatible with Python 3.x
+
 Dependencies can be installed using requirements.txt
 
 
@@ -64,17 +65,17 @@ The input to Caf4AV is a attribute value list in an Open KB. After Caf4av, all v
 
 ### Usage:
 
-##### text embedding
+##### 1. text embedding
 getting embeddings from OpenAI's api `text-embedding-3-large` for every value by `text_embedding.py`;
 
-##### similarity calculation
+##### 2. similarity calculation
 calculating similarities for all value pairs under an attribute by `similarity.py`;
 
-##### clustering by hac
+##### 3. clustering by hac
 conducting hac on similarities by `hac.py`; 
 
-##### correction with LLMs
+##### 4. correction with LLMs
 correcting clustering results with LLMs by `post_pre4cluster`;
 
-##### clustering directly by LLMs
+##### 5. clustering directly by LLMs
 finding synonyms directly by LLMs by `final_cluster_by_api.py`;
