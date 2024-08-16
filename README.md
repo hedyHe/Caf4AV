@@ -1,7 +1,7 @@
 # How do LLMs assist the Canonicalization of Attribute Values in Open KBs?
 
 Source code and dataset for paper: How do LLMs assist the Canonicalization of Attribute Values in Open KBs?
-![Alt text](./images/caf.png#pic_center=40*80)
+![Alt text](./images/caf.png#pic_center =40*80)
 
 the first two step (attribute selection and error detection require human involvement) are not included in this repository.
 
@@ -14,7 +14,7 @@ Dependencies can be installed using requirements.txt
 
 
 ### Datasets
-The input to Caf4AV is a attribute value list in an Open KB. After Caf4av, all values under an attribute will be divided into three groups: *error_vs*, *clusters*, *single_vs*.  An example is shown below:
+The input to Caf4AV is a attribute value list in an Open KB. After Caf4av, all values under an attribute will be divided into three groups: *clusters*, *single_vs*, *error_vs*.  An example is shown below:
 
 ```json
 {
