@@ -1,7 +1,7 @@
 # How do LLMs assist the Canonicalization of Attribute Values in Open KBs?
 
 Source code and dataset for paper: How do LLMs assist the Canonicalization of Attribute Values in Open KBs?
-![Alt text](./images/caf.png)
+![Alt text](./images/caf.png#pic_center=180*180)
 
 the first two step (attribute selection and error detection require human involvement) are not included in this repository.
 
@@ -36,7 +36,8 @@ The input to Caf4AV is a attribute value list in an Open KB. After Caf4av, all v
                     "United States /",
                     "America",
                     "USA"
-                ],
+                ]
+            },
 			"single_vs": [
                 "German-Swedish",
                 "Czech Republic",
@@ -47,8 +48,7 @@ The input to Caf4AV is a attribute value list in an Open KB. After Caf4av, all v
             "error_vs": [
                 "Multinational",
                 "Ten-seat passenger transport"
-            
-			}
+            ]
 		}
 	}
 }
@@ -60,17 +60,17 @@ The input to Caf4AV is a attribute value list in an Open KB. After Caf4av, all v
 
 ### Usage:
 
-###### text embedding
+##### text embedding
 getting embeddings from OpenAI's api `text-embedding-3-large` for every value by `text_embedding.py`;
 
-###### similarity calculation
+##### similarity calculation
 calculating similarities for all value pairs under an attribute by `similarity.py`;
 
-###### clustering by hac
+##### clustering by hac
 conducting hac on similarities by `hac.py`; 
 
-###### correction with LLMs
+##### correction with LLMs
 correcting clustering results with LLMs by `post_pre4cluster`;
 
-###### clustering directly by LLMs
+##### clustering directly by LLMs
 finding synonyms directly by LLMs by `final_cluster_by_api.py`;
