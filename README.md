@@ -1,7 +1,7 @@
 # How do LLMs assist the Canonicalization of Attribute Values in Open KBs?
 
 Source code and dataset for paper: How do LLMs assist the Canonicalization of Attribute Values in Open KBs?
-![Alt text](./images/caf.png#pic_center=180*180)
+![Alt text](./images/caf.png#pic_center=90*180)
 
 the first two step (attribute selection and error detection require human involvement) are not included in this repository.
 
@@ -22,33 +22,33 @@ The input to Caf4AV is a attribute value list in an Open KB. After Caf4av, all v
 		"all": {
 			"clusters": {
 				"Australia/United States": [
-                    "Australia and the United States",
-                    "Australia/United States",
-                    "United States / Australia"
-                ],
-                "USA": [
-                    "US",
-                    "U.S.",
-                    "U.S.A",
-                    "United States of America",
-                    "U.S.A.",
-                    "United States",
-                    "United States /",
-                    "America",
-                    "USA"
-                ]
-            },
+					"Australia and the United States",
+					"Australia/United States",
+					"United States / Australia"
+				],
+				"USA": [
+					"US",
+					"U.S.",
+					"U.S.A",
+					"United States of America",
+					"U.S.A.",
+					"United States",
+					"United States /",
+					"America",
+					"USA"
+				]
+			},
 			"single_vs": [
-                "German-Swedish",
-                "Czech Republic",
-                "United Kingdom/Italy",
-                "Multi-national",
-                "Slovakia"
-                ],
-            "error_vs": [
-                "Multinational",
-                "Ten-seat passenger transport"
-            ]
+				"German-Swedish",
+				"Czech Republic",
+				"United Kingdom/Italy",
+				"Multi-national",
+				"Slovakia"
+			],
+			"error_vs": [
+				"Multinational",
+				"Ten-seat passenger transport"
+			]
 		}
 	}
 }
