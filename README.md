@@ -1,11 +1,11 @@
 # How do LLMs assist the Canonicalization of Attribute Values in Open KBs?
 
 Source code and dataset for paper: How do LLMs assist the Canonicalization of Attribute Values in Open KBs?
-![Alt text](./images/caf.png#pic_center=90*180)
+![Alt text](./images/caf.png#pic_center=40*80)
 
 the first two step (attribute selection and error detection require human involvement) are not included in this repository.
 
-The repository is only for the third step 'Synset Mining', which is a fully-automatic process.
+The repository is only for the third step 'Synsets Mining', which is a fully-automatic process.
 
 ### Dependencies
 
