@@ -3,7 +3,7 @@
 Source code and dataset for paper: How do LLMs assist the Canonicalization of Attribute Values in Open KBs?
 <!--![Alt text](./images/caf.png =30*60) -->
 
-<img src = './images/caf.png' width="50" height="100" alt='alt text'>
+<img src = './images/caf.png' width="300" height="600" alt='alt text'>
 
 the first two step (attribute selection and error detection require human involvement) are not included in this repository.
 
