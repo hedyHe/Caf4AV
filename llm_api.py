@@ -44,7 +44,6 @@ class TYQW_api:
 	def __init__(self, model):	
 		
 		my_key = 'api_key*****' 
-		my_key = 'sk-acf4211e6c43496e982c9a0c291de56c'
 		dashscope.api_key = my_key
 		self.model = model
 		print('model:', self.model)

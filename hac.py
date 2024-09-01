@@ -197,7 +197,6 @@ class Ours:
 					print('----------------\nthe attribute currently processed is::', attr)
 					print('the concept currently processed is:', con)
 
-					#处理相似度
 					sim_dict = {}
 					for k, v in sims.items():
 						try:

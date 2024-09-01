@@ -68,7 +68,7 @@ class Post:
 									'stat1Header', 'batting', 'areaBlank1Title', 
 									'chrtitle', 'broadcastArea', 
 									'sworntype', 'lakeType', 'scoreboard', 'timezone1Dst', 
-									'link2Name']   #13个 
+									'link2Name']   #13 
 		elif self.dataset == 'cndbpedia':
 			self.p_suffix = ''
 			self.newprompt = -1 #the best prompt 
@@ -164,8 +164,8 @@ class Post:
 			self.new_prompts = json.load(fr)	
 
 	def get_center(self, gather, sim_pairs):
-		len_  = len(gather)   #簇中的要素数
-		sims = []   #相似度矩阵
+		len_  = len(gather)   
+		sims = []   
 		sum_sim = 0
 		if len_ in [1]:
 			return {'center': gather[0]} #} #, 'ave_sim': 0.0 
@@ -396,7 +396,7 @@ class Post:
 		return cand_pairs			
 	
 	def merge_clus_by_llm(self, old_clus, llm_res, noadded):
-		"""对簇进行合并
+		"""merging clusters
 		args:
 			old_clus: {center:list}
 			llm_res: {p:str}
@@ -486,7 +486,7 @@ class Post:
 						mappings[v1] = idx
 						mappings[v2] = idx
 						temp_cluster.append(vs)
-						# print('新增簇:', vs, idx)
+						# print('new clusters:', vs, idx)
 						if v2 in temp_old_clus:
 							temp_cluster[idx].extend(temp_old_clus[v2])
 							del temp_old_clus[v2]

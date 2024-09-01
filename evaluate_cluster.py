@@ -18,7 +18,6 @@ class Eva_Clu:
 	"""
 	def __init__(self):
 		current_path, _ = os.path.split(os.path.realpath(__file__))
-		# self.dir_ = 'E:\\research\\数据库清洗\\code'
 
 		self.dataset = 'cndbpedia'
 		self.dataset = 'dbpedia'
@@ -36,7 +35,7 @@ class Eva_Clu:
 			ci_flag = '0'
 			self.target_attrcons = ['timeZone', 'broadcastArea', 'timezone1Dst', 'chairLabel', 'lakeType', 
 								'areaBlank1Title', 'scoreboard', 'architectureType', 'batting', 
-								'sworntype', 'stat1Header', 'link2Name', 'chrtitle']   #13个
+								'sworntype', 'stat1Header', 'link2Name', 'chrtitle']   #13
 		
 			self.res_file = './baselines/our_dbpedia_text_emb_large_cp_w_f20.8_0_post_llama3_p2_15_intra.json' 
 			self.stand_file = self.dataset + '/stand_clusterres4'+self.dataset+'_0.json'
@@ -66,10 +65,10 @@ class Eva_Clu:
 									del self.res_data[k] 
 
 	def temp_convert_data(self, data_1, data_2):
-		#预处理原始数据，将其输出为列表形式, data_1是标准答案，data_2是预测结果
+		#covert original data into a list, data_1 is standard data, and data_2 is predict results
 		#data2: {k: [], k: [], k: []}
 		#return : [0,0,1,2,3,4,3,2,1,1]
-		v2labels = {}  #保存每个attr_value被聚类后的簇号， key: attr_value, value:[], 标准簇号，预测簇号
+		v2labels = {}  #key: attr_value, value:[stand_id, pred_id], 
 
 		clusters = data_1['clusters']
 		noadded = data_1['noadded_vs']
@@ -122,7 +121,6 @@ class Eva_Clu:
 
 	def convert_data(self, data_1, data_2):
 		#convert the original data into a One-dimensional list 
-		#预处理原始数据，将其输出为列表形式, data_1是标准答案，data_2是预测结果
 		#data_1: standard answers [[],[],[]]
 		#data_2: predict answers [[],[],[]]
 		#return : [0,0,1,2,3,4,3,2,1,1]
@@ -222,7 +220,7 @@ class Eva_Clu:
 		homos = {}
 		comps = {}
 		v_measures = {}
-		total = {}   #分母
+		total = {}   #denominator
 		for attr, info in self.res_data.items():
 			for con, pred_info in info.items():
 				c_info = self.stand_data[attr][con]
@@ -274,7 +272,7 @@ class Eva_Clu:
 					print(pred_info)
 					exit()
 				ari = round(adjusted_rand_score(y_label, y_test), 4)
-				# print('属性:', attr, '概念:', con, 'ari:', ari)
+				# print('attribute:', attr, 'concept:', con, 'ari:', ari)
 				# aris.append(ari)
 				aris[attr+'_'+con] = ari
 				total[attr+'_'+con] = len(y_label)
@@ -437,7 +435,6 @@ class Eva_Clu:
 
 				print('c_info:', c_info)
 				print('pred_info:', pred_info)
-				#统计pairwise P, R 的相关指标
 				stand_res = self.convert_to_pairs(list(c_info['clusters'].values()))
 				pred_res = self.convert_to_pairs(pred_info)
 				tp = len(stand_res & pred_res)
