@@ -7,9 +7,9 @@ Source code and dataset for paper: How do LLMs assist the Canonicalization of At
 <img src = './images/caf.png' width="500">
 </div>
 
-the first two step (attribute selection and error detection require human involvement) are not included in this repository.
+the first two modules (attribute selection and error detection require human involvement) are not included in this repository.
 
-The repository is only for the third step 'Synsets Mining', which is a fully-automatic process.
+The repository is only for the third module 'Synsets Mining', which is a fully-automatic process.
 
 ### Dependencies
 
