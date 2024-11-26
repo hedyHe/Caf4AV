@@ -5,10 +5,12 @@ Source code and dataset for paper: Caf4AV: LLM-Enhanced Collaborative Framework 
 
 <div align="center">
 <img src = './images/caf.png' width="500">
+<figcaption>The Overview of the Caf4AV Framework</figcaption>
 </div>
 
 <div align="center">
 <img src = './images/process1.png' width="500">
+<figcaption>The process of two-factor authentication correction mechanism</figcaption>>
 </div>
 the first two modules (attribute selection and error detection require human involvement) are not included in this repository.
 
