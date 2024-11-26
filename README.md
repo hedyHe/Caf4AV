@@ -1,12 +1,15 @@
-# How do LLMs assist the Canonicalization of Attribute Values in Open KBs?
+# Caf4AV: LLM-Enhanced Collaborative Framework for Attribute Value Canonicalization in Open KBs
 
-Source code and dataset for paper: How do LLMs assist the Canonicalization of Attribute Values in Open KBs?
+Source code and dataset for paper: Caf4AV: LLM-Enhanced Collaborative Framework for Attribute Value Canonicalization in Open KBs
 <!--![Alt text](./images/caf.png =30*60) -->
 
 <div align="center">
 <img src = './images/caf.png' width="500">
 </div>
 
+<div align="center">
+<img src = './images/process1.png' width="500">
+</div>
 the first two modules (attribute selection and error detection require human involvement) are not included in this repository.
 
 The repository is only for the third module 'Synsets Mining', which is a fully-automatic process.
